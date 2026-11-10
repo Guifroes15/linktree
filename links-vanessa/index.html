@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vanessa Ferreira · Método Vértice</title>
+<meta name="description" content="Vértice Vox, Vértice Start e Box de Consultoria com Vanessa Ferreira.">
+<meta name="theme-color" content="#F6F1EA">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Edite aqui os links ===== */
+</style>
+<script>
+const CONFIG = {
+  links: {
+    vox:         "https://teleprompter-sand-seven.vercel.app/", // troque pelo link do checkout do Vértice Vox na Kiwify
+    start:       "https://lpvanessa.vercel.app",                // página de vendas do Vértice Start
+    consultoria: "https://wa.me/55SEUNUMERO?text=" + encodeURIComponent("Oi, Vanessa! Quero saber mais sobre o Box de Consultoria.")
+  },
+  instagram: "https://instagram.com/",  // @ da Vanessa
+  whatsapp:  "https://wa.me/55SEUNUMERO",
+  metaPixelId: ""                        // opcional
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F6F1EA;--sand:#EDE4D7;--white:#FFFDFA;--esp:#17120F;--text:#2B2622;--muted:#7A7068;--gold:#C6A16A;--goldd:#A9844C;--line:#E4D9CA}
+html{background:var(--bg)}
+body{min-height:100svh;color:var(--text);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+ background:radial-gradient(120% 50% at 50% 0%,#FFFDFA 0%,transparent 70%),var(--bg)}
+.page{max-width:460px;margin:0 auto;padding:48px 20px calc(36px + env(safe-area-inset-bottom))}
+header{text-align:center}
+.avatar{width:92px;height:92px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);padding:4px;background:var(--white);opacity:0;animation:up .7s .05s forwards}
+.kicker{margin-top:18px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--goldd);font-weight:600;opacity:0;animation:up .7s .12s forwards}
+h1{font-weight:700;font-size:32px;letter-spacing:-.02em;line-height:1.15;margin-top:8px;color:var(--esp);opacity:0;animation:up .7s .18s forwards}
+em{font-family:'Bodoni Moda',serif;font-style:italic;font-weight:500;color:var(--goldd);letter-spacing:0}
+h1 span{color:var(--goldd)}
+.bio{margin:10px auto 0;max-width:320px;font-size:14px;line-height:1.6;color:var(--muted);opacity:0;animation:up .7s .24s forwards}
+
+.links{margin-top:32px;display:grid;gap:14px}
+.card{position:relative;display:block;border-radius:22px;overflow:hidden;text-decoration:none;color:var(--text);
+ background:var(--white);border:1px solid var(--line);box-shadow:0 1px 2px rgba(43,38,34,.04),0 10px 30px -18px rgba(43,38,34,.18);isolation:isolate;
+ opacity:0;transform:translateY(14px);animation:up .7s forwards;transition:transform .35s ease,box-shadow .35s ease,border-color .35s}
+.card:nth-child(1){animation-delay:.32s}.card:nth-child(2){animation-delay:.42s}.card:nth-child(3){animation-delay:.52s}
+.card img{position:absolute;top:0;right:0;width:58%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s ease}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(90deg,var(--white) 0%,var(--white) 42%,rgba(255,253,250,.75) 52%,rgba(255,253,250,0) 72%)}
+.card .in{min-height:176px;display:flex;flex-direction:column;justify-content:center;padding:22px;max-width:62%}
+.tag{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--goldd);font-weight:700}
+.card h2{font-weight:600;font-size:23px;letter-spacing:-.02em;line-height:1.1;margin:7px 0 6px;color:var(--esp)}
+.card h2 em{font-size:27px}
+.card p{font-size:13px;line-height:1.5;color:var(--muted)}
+.cta{margin-top:12px;display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--esp);
+ border-bottom:1px solid var(--gold);padding-bottom:3px;align-self:flex-start}
+.cta svg{width:14px;height:14px;color:var(--goldd);transition:transform .3s}
+.card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 18px 40px -20px rgba(169,132,76,.45)}
+.card:hover img{transform:scale(1.04)}
+.card:hover .cta svg{transform:translateX(3px)}
+.card:active{transform:scale(.985)}
+.card:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.c-vox img{object-position:62% 30%}
+.c-start img{object-position:60% 15%}
+.c-cons img{object-position:55% 18%}
+
+.social{margin-top:30px;display:flex;justify-content:center;gap:12px;opacity:0;animation:up .7s .62s forwards}
+.social a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:var(--white);color:var(--goldd);transition:.3s}
+.social a:hover{background:var(--esp);color:var(--white);border-color:var(--esp)}
+.social svg{width:19px;height:19px}
+footer{margin-top:24px;text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;color:var(--goldd);font-size:16px}
+@keyframes up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}}
+@media (max-width:360px){.card h2{font-size:21px}.card h2 em{font-size:24px}.card .in{max-width:68%}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <img class="avatar" src="avatar.jpg" alt="Vanessa Ferreira">
+    <div class="kicker">Método Vértice</div>
+    <h1>Vanessa <span>Ferreira</span></h1>
+    <p class="bio">Presença, posicionamento e conteúdo que vende. Escolha por onde começar.</p>
+  </header>
+
+  <nav class="links">
+    <a class="card c-vox" data-link="vox" target="_blank" rel="noopener">
+      <img src="vox.jpg" alt="" loading="eager">
+      <div class="in">
+        <span class="tag">Teleprompter</span>
+        <h2>Vértice <em>Vox</em></h2>
+        <p>Grave seus vídeos lendo o roteiro com naturalidade.</p>
+        <span class="cta">Quero o Vox <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    <a class="card c-start" data-link="start" target="_blank" rel="noopener">
+      <img src="start.jpg" alt="" loading="eager">
+      <div class="in">
+        <span class="tag">Curso</span>
+        <h2>Vértice <em>Start</em></h2>
+        <p>O passo a passo para construir sua presença.</p>
+        <span class="cta">Conhecer o curso <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+    <a class="card c-cons" data-link="consultoria" target="_blank" rel="noopener">
+      <img src="consultoria.jpg" alt="" loading="lazy">
+      <div class="in">
+        <span class="tag">Individual</span>
+        <h2>Box de<br><em>Consultoria</em></h2>
+        <p>Um olhar estratégico e personalizado para você.</p>
+        <span class="cta">Quero agendar <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </div>
+    </a>
+  </nav>
+
+  <div class="social">
+    <a data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19z"/><path d="M9 9.2c.2 2.4 2.6 5 5.4 5.6l1.2-1.3-1.8-.9-.8.8c-1-.4-2-1.4-2.4-2.4l.8-.8-.9-1.8z" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+  <footer>Método Vértice</footer>
+</main>
+<script>
+document.querySelectorAll('[data-link]').forEach(a=>{
+  a.href = CONFIG.links[a.dataset.link];
+  a.addEventListener('click',()=>{ try{ window.fbq && fbq('trackCustom','CliqueLink',{destino:a.dataset.link}); }catch(e){} });
+});
+document.querySelectorAll('[data-social]').forEach(a=>{ a.href = CONFIG[a.dataset.social]; });
+if (CONFIG.metaPixelId) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.metaPixelId); fbq('track','PageView');
+}
+</script>
+</body>
+</html>
