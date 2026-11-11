@@ -16,9 +16,10 @@
 <script>
 const CONFIG = {
   links: {
-    vox:         "https://teleprompter-sand-seven.vercel.app/", // troque pelo link do checkout do Vértice Vox na Kiwify
-    start:       "https://lpvanessa.vercel.app",                // página de vendas do Vértice Start
-    consultoria: "https://wa.me/55SEUNUMERO?text=" + encodeURIComponent("Oi, Vanessa! Quero saber mais sobre o Box de Consultoria.")
+    vox:          "https://pay.kiwify.com.br/8AHzihk",   // Vértice Vox · Anual (R$ 97/ano)
+    start:        "https://lpvanessa.vercel.app/",       // página de vendas do Vértice Start
+    consultoria1: "https://pay.kiwify.com.br/qoEN0tP",   // Box de Consultoria · 1 sessão (R$ 1.997)
+    consultoria3: "https://pay.kiwify.com.br/sJmDqPg"    // Box de Consultoria · 3 sessões (R$ 2.997)
   },
   instagram: "https://instagram.com/",  // @ da Vanessa
   whatsapp:  "https://wa.me/55SEUNUMERO",
@@ -69,6 +70,11 @@ h1 span{color:var(--goldd)}
 .social a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:var(--white);color:var(--goldd);transition:.3s}
 .social a:hover{background:var(--esp);color:var(--white);border-color:var(--esp)}
 .social svg{width:19px;height:19px}
+.ctas{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px}
+.ctas .cta{margin-top:0;text-decoration:none}
+.ctas .cta:hover svg{transform:translateX(3px)}
+.members{display:block;margin-top:22px;text-align:center;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.members:hover{color:var(--esp)}
 footer{margin-top:24px;text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;color:var(--goldd);font-size:16px}
 @keyframes up{to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}}
@@ -103,21 +109,25 @@ footer{margin-top:24px;text-align:center;font-family:'Bodoni Moda',serif;font-st
         <span class="cta">Conhecer o curso <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
       </div>
     </a>
-    <a class="card c-cons" data-link="consultoria" target="_blank" rel="noopener">
+    <div class="card c-cons">
       <img src="consultoria.jpg" alt="" loading="lazy">
       <div class="in">
         <span class="tag">Individual</span>
         <h2>Box de<br><em>Consultoria</em></h2>
         <p>Um olhar estratégico e personalizado para você.</p>
-        <span class="cta">Quero agendar <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        <div class="ctas">
+          <a class="cta" data-link="consultoria1" target="_blank" rel="noopener">1 sessão · R$ 1.997 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <a class="cta" data-link="consultoria3" target="_blank" rel="noopener">3 sessões · R$ 2.997 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
       </div>
-    </a>
+    </div>
   </nav>
 
   <div class="social">
     <a data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
     <a data-social="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19z"/><path d="M9 9.2c.2 2.4 2.6 5 5.4 5.6l1.2-1.3-1.8-.9-.8.8c-1-.4-2-1.4-2.4-2.4l.8-.8-.9-1.8z" fill="currentColor" stroke="none"/></svg></a>
   </div>
+  <a class="members" href="https://members.kiwify.com/" target="_blank" rel="noopener">Já é aluna? Acesse a área de membros</a>
   <footer>Método Vértice</footer>
 </main>
 <script>
